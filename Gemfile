@@ -12,6 +12,8 @@ gem "sinatra-activerecord"
 gem "rake"
 gem "puma"
 gem "http"
+gem "pry"
+gem "json"
 
 group :development do
   gem "rerun"
