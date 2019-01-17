@@ -4,10 +4,12 @@ source "https://rubygems.org"
 
 ruby "~> 2.5.1"
 
-gem "sinatra"
+gem "pg"
 gem "dotenv"
 gem "activerecord"
-gem "activesupport"
+gem "sinatra"
+gem "sinatra-activerecord"
+gem "rake"
 
 group :development do
   gem "rerun"

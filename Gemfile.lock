@@ -40,6 +40,7 @@ GEM
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
+    pg (1.1.4)
     powerpack (0.1.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -52,6 +53,7 @@ GEM
     rack-protection (2.0.5)
       rack
     rainbow (3.0.0)
+    rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -86,6 +88,9 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.5)
       tilt (~> 2.0)
+    sinatra-activerecord (2.0.13)
+      activerecord (>= 3.2)
+      sinatra (>= 1.0)
     thread_safe (0.3.6)
     tilt (2.0.9)
     timecop (0.9.1)
@@ -102,14 +107,16 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
-  activesupport
   dotenv
   faker
+  pg
   pry-byebug
+  rake
   rerun
   rspec
   rubocop
   sinatra
+  sinatra-activerecord
   timecop
   webmock
 

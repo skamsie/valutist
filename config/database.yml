@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: valutist_dev
+  pool: 4
+  username:
+  password:
