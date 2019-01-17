@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby "~> 2.5.1"
+ruby "~> 2.5.0"
 
 gem "pg"
 gem "dotenv"
@@ -10,6 +10,8 @@ gem "activerecord"
 gem "sinatra"
 gem "sinatra-activerecord"
 gem "rake"
+gem "puma"
+gem "http"
 
 group :development do
   gem "rerun"

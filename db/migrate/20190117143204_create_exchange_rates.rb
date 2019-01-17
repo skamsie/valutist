@@ -14,7 +14,6 @@ class CreateExchangeRates < ActiveRecord::Migration[5.2]
       t.string :bgn
       t.string :dkk
       t.string :sar
-      t.string :ply
       t.string :huf
       t.string :bwp
       t.string :mxn
