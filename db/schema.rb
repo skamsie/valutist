@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_143204) do
     t.float "DKK"
     t.float "EUR"
     t.float "GBP"
-    t.float "HUF"
+    t.float "RON"
     t.float "INR"
     t.float "ISK"
     t.float "JPY"

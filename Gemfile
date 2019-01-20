@@ -4,19 +4,21 @@ source "https://rubygems.org"
 
 ruby "~> 2.5.0"
 
-gem "pg"
-gem "dotenv"
 gem "activerecord"
+gem "dotenv"
+gem "http"
+gem "json"
+gem "pg"
+gem "pry"
+gem "puma"
+gem "rake"
 gem "sinatra"
 gem "sinatra-activerecord"
-gem "rake"
-gem "puma"
-gem "http"
-gem "pry"
-gem "json"
+gem "sinatra-param"
+gem "rack-contrib"
 
 group :development do
-  gem "rerun"
+  gem "sinatra-reloader"
 end
 
 group :development, :test do
