@@ -1,0 +1,12 @@
+dist: trusty
+sudo: false
+language: ruby
+rvm: 2.5.0
+cache: bundler
+addons:
+  postgresql: "9.6"
+before_script:
+  - RACK_ENV=test bundle exec rake db:create db:migrate
+script:
+  - bundle exec rubocop
+  - bundle exec rspec --format documentation

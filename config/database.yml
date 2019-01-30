@@ -2,6 +2,14 @@ development:
   adapter: postgresql
   encoding: unicode
   database: valutist_dev
-  pool: 4
+  pool: 8
+  username:
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: valutist_test
+  pool: 8
   username:
   password:

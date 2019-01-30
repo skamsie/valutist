@@ -1,4 +1,3 @@
-require 'sinatra/activerecord'
-require './app'
+require "./setup"
 
-run App
+run Valutist

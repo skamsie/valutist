@@ -1,3 +1,3 @@
-require 'sinatra/activerecord'
-require 'sinatra/activerecord/rake'
-require './app'
+require_relative "setup"
+require "sinatra/activerecord"
+require "sinatra/activerecord/rake"
