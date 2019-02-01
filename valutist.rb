@@ -7,7 +7,7 @@ require_relative "models/exchange_rate"
 class Valutist < Sinatra::Base
   FIXER_API_KEY = ENV["FIXER_API_KEY"]
   FIXER_API_URL = ENV["FIXER_API_URL"]
-  UPDATE_INTERVAL = 1080 # seconds
+  UPDATE_INTERVAL = 21600 # seconds (6 hours)
   ROUND = 4
 
   use Rack::PostBodyContentTypeParser
