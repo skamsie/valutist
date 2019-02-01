@@ -2,6 +2,7 @@
 
 '_Ascund dolarii si marcile sa nu-mi faca negre zilele_'
 
+[![Build Status](https://travis-ci.com/skamsie/valutist.svg?branch=master)](https://travis-ci.com/skamsie/valutist/branches)
 
 #### Install & Run
 
