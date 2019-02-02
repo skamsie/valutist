@@ -1,10 +1,17 @@
-## valutist
+# valutist
 
 '_Ascund dolarii si marcile sa nu-mi faca negre zilele_'
 
 [![Build Status](https://travis-ci.com/skamsie/valutist.svg?branch=master)](https://travis-ci.com/skamsie/valutist/branches)
 
-#### Install & Run
+### Requirements
+
+```
+PostgreSQL
+Ruby v 2.5.0 (with bundler)
+```
+
+### Install & Run
 
 set `FIXER_API_KEY` as an environment variable.
 
@@ -17,7 +24,7 @@ A free api key can be used (it is limited to 1000 requests per month). The app d
 > bundle exec puma -p 9293
 ```
 
-#### Usage
+### Usage
 
 Get the latest conversion rates
 
