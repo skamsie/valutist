@@ -38,7 +38,7 @@ def supported_currencies
   ExchangeRate.column_names.select { |x| /[[:upper:]]/.match(x) }
 end
 
-def stub_fixer_request_latest(success = true, rates = nil)
+def stub_fixer_request_latest(success: true, rates: nil)
   uri = "#{ENV['FIXER_API_URL']}/latest"
   default_rates = Hash[
     supported_currencies.map do |x|

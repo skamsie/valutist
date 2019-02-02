@@ -53,7 +53,7 @@ class Valutist < Sinatra::Base
       transform: ->(i) { i.map { |j| j.delete(" ").upcase } },
       required: true
     )
-    param :amount, Integer, min: 1, max: 10_000_000, required: true
+    param :amount, Integer, min: 1, max: 10_000_000, default: 1, required: true
     param :round, Integer, min: 0, max: 5, default: ROUND
 
     unless params["to"].to_set.subset?(rates.keys.to_set)
