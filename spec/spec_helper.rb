@@ -20,7 +20,13 @@ end
 
 RSpec.configure do |config|
   WebMock.disable_net_connect!(allow_localhost: true)
+
+  config.include FactoryBot::Syntax::Methods
   config.include RSpecMixin
+
+  config.before(:suite) do
+    FactoryBot.find_definitions
+  end
 
   config.before(:each) do
     DatabaseCleaner.strategy = :truncation
@@ -35,7 +41,9 @@ end
 def stub_fixer_request_latest(success = true, rates = nil)
   uri = "#{ENV['FIXER_API_URL']}/latest"
   default_rates = Hash[
-    supported_currencies.map { |x| [x, (x == "EUR" ? 1 : rand(0.5..100))] }
+    supported_currencies.map do |x|
+      [x, (x == "EUR" ? 1 : rand(0.5..100)).round(5)]
+    end
   ]
   stub_request(:get, uri)
     .with(query: { access_key: nil })

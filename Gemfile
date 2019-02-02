@@ -26,11 +26,12 @@ group :test do
 end
 
 group :development, :test do
-  gem "rack-test", require: "rack/test"
+  gem "factory_bot"
   gem "faker"
+  gem "pry-byebug"
+  gem "rack-test", require: "rack/test"
   gem "rspec"
   gem "rubocop"
-  gem "webmock"
   gem "timecop"
-  gem "pry-byebug"
+  gem "webmock"
 end

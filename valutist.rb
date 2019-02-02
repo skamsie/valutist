@@ -27,9 +27,7 @@ class Valutist < Sinatra::Base
     ExchangeRate.last.as_json
       .reject { |k| k == "id" }
       .transform_values do |v|
-        if v.is_a?(Numeric)
-          v.round(ROUND)
-        elsif v.methods.include?(:strftime)
+        if v.methods.include?(:strftime)
           v.to_time.iso8601
         else
           v
@@ -56,6 +54,7 @@ class Valutist < Sinatra::Base
       required: true
     )
     param :amount, Integer, min: 1, max: 10_000_000, required: true
+    param :round, Integer, min: 0, max: 5, default: ROUND
 
     unless params["to"].to_set.subset?(rates.keys.to_set)
       halt(
@@ -73,7 +72,8 @@ class Valutist < Sinatra::Base
     result = {}
 
     params["to"].each do |currency|
-      entry = (base_to_from * rates[currency] * params["amount"]).round(ROUND)
+      entry = (base_to_from * rates[currency] * params["amount"])
+        .round(params["round"])
       result[currency] = entry
     end
 
